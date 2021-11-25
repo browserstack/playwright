@@ -117,6 +117,7 @@ interface TestConfig {
   updateSnapshots?: UpdateSnapshots;
   webServer?: WebServerConfig;
   workers?: number;
+  reuseWorkers?: boolean;
 
   expect?: ExpectSettings;
   metadata?: any;
@@ -155,6 +156,7 @@ export interface FullConfig<TestArgs = {}, WorkerArgs = {}> {
   shard: Shard;
   updateSnapshots: UpdateSnapshots;
   workers: number;
+  reuseWorkers: boolean;
   webServer: WebServerConfig | null;
 }
 
