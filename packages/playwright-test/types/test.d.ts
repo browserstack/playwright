@@ -497,6 +497,7 @@ interface TestConfig {
    * Playwright Test.
    */
   workers?: number;
+  reuseWorkers?: boolean;
 
   /**
    * Configuration for the `expect` assertion library.
@@ -771,6 +772,7 @@ export interface FullConfig<TestArgs = {}, WorkerArgs = {}> {
    * Playwright Test.
    */
   workers: number;
+  reuseWorkers: boolean;
   webServer: WebServerConfig | null;
 }
 
@@ -823,6 +825,7 @@ export interface WorkerInfo {
    * Learn more about [parallelism and sharding](https://playwright.dev/docs/test-parallel) with Playwright Test.
    */
   workerIndex: number;
+  requireFile: string;
 }
 
 /**

@@ -127,6 +127,7 @@ export class WorkerRunner extends EventEmitter {
       workerIndex: this._params.workerIndex,
       project: this._project.config,
       config: this._loader.fullConfig(),
+      requireFile: this._params.requireFile,
     };
   }
 

@@ -184,7 +184,7 @@ export class Dispatcher {
       // - there are no remaining
       // - we are here not because something failed
       // - no unrecoverable worker error
-      if (!remaining.length && !failedTestIds.size && !params.fatalError) {
+      if (!remaining.length && !failedTestIds.size && !params.fatalError && this._loader.fullConfig().reuseWorkers) {
         this._freeWorkers.push(worker);
         this._notifyWorkerClaimer();
         doneWithJob();
@@ -440,6 +440,7 @@ class Worker extends EventEmitter {
       repeatEachIndex: testGroup.repeatEachIndex,
       projectIndex: testGroup.projectIndex,
       loader: this.runner._loader.serialize(),
+      requireFile: testGroup.requireFile,
     };
     this.process.send({ method: 'init', params });
     await new Promise(f => this.process.once('message', f));  // Ready ack
