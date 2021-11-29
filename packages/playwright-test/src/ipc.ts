@@ -27,6 +27,7 @@ export type WorkerInitParams = {
   repeatEachIndex: number;
   projectIndex: number;
   loader: SerializedLoaderData;
+  requireFile: string;
 };
 
 export type TestBeginPayload = {
