@@ -590,6 +590,7 @@ interface TestConfig {
    *
    */
   workers?: number;
+  reuseWorkers?: boolean;
 
   /**
    * Configuration for the `expect` assertion library.
