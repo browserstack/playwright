@@ -48,7 +48,7 @@
     "commander": "^8.2.0",
     "expect": "=27.2.5",
     "jest-matcher-utils": "=27.2.5",
-    "jpeg-js": "^0.4.2",
+    "jpeg-js": "^0.4.4",
     "minimatch": "^3.0.3",
     "ms": "^2.1.2",
     "open": "^8.3.0",
